@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qml/StyleSetting/Style.qml</file>
+        <file>qml/StyleSetting/qmldir</file>
+        <file>qml/Calculater/MainCalculater.qml</file>
+        <file>qml/Calculater/qmldir</file>
+        <file>qml/ResourceProvider/Resource.qml</file>
+        <file>qml/ResourceProvider/qmldir</file>
+        <file>qml/Header/Header.qml</file>
+        <file>qml/Header/qmldir</file>
+        <file>qml/Drawer/MainDrawer.qml</file>
+        <file>qml/Drawer/qmldir</file>
+        <file>qml/Graph/MainGraph.qml</file>
+        <file>qml/Calculater/ListModelTopButton.qml</file>
+        <file>resource/menu_button.svg</file>
+    </qresource>
+</RCC>
