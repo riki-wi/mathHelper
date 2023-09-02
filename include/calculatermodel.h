@@ -29,13 +29,7 @@ private:
                                       CellButton("1", "operand", '1'), CellButton("2", "operand", '2'),
                                       CellButton("3", "operand", '3'), CellButton("+", "bin_operator", '+'),
                                       CellButton("+/-", "sign", '\0'), CellButton("0", "operand", '0'),
-                                      CellButton(",", "operand", ','), CellButton("=", "calculator", '=')
-                                     };
-
-    std::map<char16_t, int> preority_map = {{'0', 0}, {'1', 0}, {'2', 0}, {'3', 0}, {'4', 0},
-                                            {'5', 0}, {'6', 0}, {'7', 0}, {'8', 0}, {'9', 0},
-                                            {'e', 0}, {0x03C0, 0}, {'(', 1}, {')', 2}, {'+', 3},
-                                            {'-', 3}, {'*', 4}, {'\\', 4}, {'^', 5}, {0x221A, 6}};
+                                      CellButton(",", "operand", ','), CellButton("=", "calculator", '=')};
 
     enum Roles
     {
@@ -47,10 +41,6 @@ private:
     const int m_rowCountCalc;
     const int m_columnCountCalc;
 
-    QString infixToPostfix(const QString& expr) const;
-    double calcPostfix(const QString& expr) const;
-    int get_preority_by_sumbol(char16_t symbol) const;
-
 public:
     CalculaterModel(QObject *parent = nullptr, int rowCount = 7, int columCount = 4);
 
@@ -60,6 +50,4 @@ public:
 
     int rowCountCalc() const;
     int columnCountCalc() const;
-
-    Q_INVOKABLE QString calc(const QString& expr);
 };
